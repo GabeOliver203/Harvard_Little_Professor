@@ -9,13 +9,13 @@ def main():
 def Get_Level():
     while True:
         try:
-            level = int(input('Choose a level for your game (1, 2, or 3): '))
+            level = int(input('Choose a level for your game (1, 2, 3, 4 or 5): '))
             if 1 <= level <= 5:
                 break
             else:
-                print('Invalid')
+                print('Invalid level')
         except ValueError:
-            print('Invalid')
+            print('Invalid level')
     return level
 
 def generate_integer(level):
