@@ -10,12 +10,12 @@ def Get_Level():
     while True:
         try:
             level = int(input('Choose a level for your game (1, 2, or 3): '))
-            if 1 <= level <= 3:
+            if 1 <= level <= 5:
                 break
             else:
-                print('Choose 1, 2, or 3!')
+                print('Invalid')
         except ValueError:
-            print('Choose 1, 2, or 3!')
+            print('Invalid')
     return level
 
 def generate_integer(level):
@@ -23,8 +23,14 @@ def generate_integer(level):
         x = randint(0, 9)
         y = randint(0, 9)
     elif level == 2:
-        x = randint(10, 99)
-        y = randint(10, 99)
+        x = randint(10, 29)
+        y = randint(10, 29)
+    elif level == 3:
+        x = randint(30, 59)
+        y = randint(30, 59)
+    elif level == 4:
+        x = randint(60, 99)
+        y = randint(60, 99)
     else:
         x = randint(100, 999)
         y = randint(100, 999)
@@ -58,7 +64,7 @@ def simulate_round(level):
             print(f'{x} + {y} = {x + y}')
             wrong_answer = 0
     
-    print(f'score{correct_answers} out of {total_rounds} correct!')
+    print(f'score {correct_answers} out of {total_rounds} correct!')
 
 if __name__ == "__main__":
     main()
