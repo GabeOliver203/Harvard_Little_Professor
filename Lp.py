@@ -16,6 +16,12 @@ def Get_Level():
                 print('Invalid level')
         except ValueError:
             print('Invalid level')
+        except EOFError:
+            print('Exiting the program')
+            exit()
+        except KeyboardInterrupt:
+            print('Exiting the program')
+            exit()
     return level
 
 def generate_integer(level):
@@ -59,7 +65,12 @@ def simulate_round(level):
                 cnt_tries += 1
                 wrong_answer += 1
                 print('EEE')
-        
+            except EOFError:
+                print('Exiting the program')
+                exit()
+            except KeyboardInterrupt:
+                print('Exiting the program')
+                exit()
         if wrong_answer == 3:
             print(f'{x} + {y} = {x + y}')
             wrong_answer = 0
