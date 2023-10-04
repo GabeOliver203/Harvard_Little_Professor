@@ -75,7 +75,7 @@ def simulate_round(level):
             print(f'{x} + {y} = {x + y}')
             wrong_answer = 0
     
-    print(f'score {correct_answers} out of {total_rounds} correct!')
+    print(f'score {correct_answers} out of {total_rounds}')
 
 if __name__ == "__main__":
     main()
